@@ -1,12 +1,3 @@
-async function fetching(endpoint) {
-    try {
-        const data = await fetch(`https://jsonplaceholder.typicode.com/${endpoint}`)
-        const dataJSON = await data.json()
-        return dataJSON
-    } catch (e) {
-        console.log('Error:', e)
-    }
-}
 
 async function buscarUsuarios(valor, tipoBusqueda) {
     try {
@@ -269,4 +260,17 @@ async function ciudadConUsuarios(ciudad) {
     }
 }
 
-ciudadConUsuarios("Gwenborough")
+// ciudadConUsuarios("Gwenborough")
+
+// Juego de lógica con datos combinados
+
+// La empresa quiere un análisis que permita cruzar información:
+
+// Encontrar si existen usuarios que no tengan ninguna publicación.
+
+// Detectar cuál es la proporción de publicaciones por usuario en relación al total de publicaciones (ejemplo: “El usuario X genera el 12% del total de publicaciones”).
+
+// Generar un informe con la ciudad cuyos usuarios, en promedio, publican más contenido.
+
+
+

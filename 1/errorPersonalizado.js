@@ -4,4 +4,4 @@ class errorWeb extends Error {
     }
 }
 
-throw new errorWeb("El error fue causado por un problema en la web")
+export default errorWeb;

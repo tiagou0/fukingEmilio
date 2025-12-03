@@ -1,3 +1,6 @@
+import errorWeb from "./errorPersonalizado.js"
+
+
 async function getAllPosts() {
     try {
         const DATA = await fetch('https://jsonplaceholder.typicode.com/posts')
@@ -54,14 +57,38 @@ async function ciudadConUsuarios(id) {
     try {
         const DATA = await getAllPosts()
 
-        const POSTS = DATA.filter(c => c.userId === id)
+        const POSTS = DATA.filter(c => c.userId === ikjnd)
 
         const TITLES = POSTS.map(t => t.title)
         console.log(TITLES)
+
+    } catch (e) {
+        console.log(errorWeb.message)
+    }
+}
+
+// ciudadConUsuarios(2)
+
+// La empresa quiere un análisis que permita cruzar información:
+
+// Encontrar si existen usuarios que no tengan ninguna publicación.
+
+// Detectar cuál es la proporción de publicaciones por usuario en relación al total de publicaciones (ejemplo: “El usuario X genera el 12% del total de publicaciones”).
+
+// Generar un informe con la ciudad cuyos usuarios, en promedio, publican más contenido.
+
+
+async function getUsersWithNoPosts(userID) {
+    try {
+        const DATA = await getAllPosts()
+
+        const FILTER = DATA.filter(i => i.userId === userID)
+        const 
+        console.log(FILTER)
 
     } catch (e) {
         console.log(e)
     }
 }
 
-ciudadConUsuarios(2)
+getUsersWithNoPosts(2)
